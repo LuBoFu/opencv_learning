@@ -2,14 +2,23 @@ import numpy as np
 import matplotlib.pyplot as plt
 import cv2
 
+# 加载图片
+img1 = cv2.imread('img/img1.png',flags=cv2.IMREAD_UNCHANGED)
+img2 = cv2.imread('img/img2.png',flags=cv2.IMREAD_UNCHANGED)
 
-# 导入图片
-img = cv2.imread('img/jpg1.jpg',flags=cv2.IMREAD_GRAYSCALE)
-cv2.imshow('image', img)
-# 写入灰度图片
-cv2.imwrite('img/jpg1_gray.png',img)
-# 按任意键，关闭弹框
-cv2.waitKey(0)#若无wait则一闪而过
+# 展示图片
+plt.imshow(img1)
+plt.imshow(img2)
+plt.savefig()
+
+
+# # 导入图片
+# img = cv2.imread('img/jpg1.jpg',flags=cv2.IMREAD_GRAYSCALE)
+# cv2.imshow('image', img)
+# # 写入灰度图片
+# cv2.imwrite('img/jpg1_gray.png',img)
+# # 按任意键，关闭弹框
+# cv2.waitKey(0)#若无wait则一闪而过
 
 # arr = np.array([1,-2, 4, 16])
 # func = np.poly1d(arr)
